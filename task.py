@@ -1,9 +1,9 @@
 class Task :
     count = 0
-    def __init__(self,desc,status):
+    def __init__(self,desc):
         self._description = desc
         self._number = Task.count + 1
-        self._status = status
+        self._status = "to do"
         Task.count = Task.count + 1
     
     def get_description(self):
