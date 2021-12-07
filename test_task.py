@@ -8,6 +8,13 @@ def test_parse_input():
     assert actual == excepted
 def test_add():
     tm = TaskManager()
-    actual = type(tm.do_action(["+","learn python"]))
-    excepted = Task
+    actual = tm.do_action(["+","learn python"])
+    excepted = True
+    assert actual == excepted
+def test_remove():
+    tm = TaskManager()
+    tm.add_task(Task("1"))
+    tm.add_task(Task("2"))
+    actual = tm.do_action(["-",3])
+    excepted = True
     assert actual == excepted
